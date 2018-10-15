@@ -8,6 +8,11 @@ geth --networkid "10" --nodiscover --datadir ~/geth/private_net -rpc --rpcaddr "
 geth --networkid "10" --nodiscover --datadir ~/geth/private_net -rpc --rpcaddr "localhost" --rpcport "8545" --rpccorsdomain "*" --rpcapi "eth,net,web3,personal" --targetgaslimit "20000000" console 2　--unlock 0xd9e7171d87ed9e70345e3378b0317241eb6ba2fc,0x219044c19c7b09715e5b95efbf84a0ed2bc3d2b5, 0x75ad02b4f8fc974068f975cd7804daa5211cd54b --password ~/geth/private_net/password.txt
 
 
+
+//ロックの解除
+personal.unlockAccount(eth.accounts[e])
+
+
 // アカウント作成
 personal.newAccount("password")
 
